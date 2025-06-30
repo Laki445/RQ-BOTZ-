@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WhatsApp QR Pair</title>
+  <title>Scan QR</title>
 </head>
 <body>
-  <h1>Scan QR to Pair WhatsApp Bot</h1>
-  <p>Open terminal for QR</p>
+  <h2>Scan to Pair Bot</h2>
+  <div id="qrcode">
+    <img src="/qr" alt="QR code will appear here" />
+  </div>
+  <script>
+    setInterval(() => {
+      document.querySelector("#qrcode img").src = "/qr?" + new Date().getTime();
+    }, 3000);
+  </script>
 </body>
 </html>
